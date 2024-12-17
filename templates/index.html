@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Physics Tutor</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <script src="/static/chart.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <h1 class="fade-in">Advanced Physics Tutor <i class="fas fa-atom"></i></h1>
+
+        <!-- Force Calculation -->
+        <section class="form-section slide-in-left">
+            <form id="forceForm">
+                <h2>Force Calculation</h2>
+                <label for="mass">Mass (kg):</label>
+                <input type="number" id="mass" step="0.1" required placeholder="Enter mass">
+                <label for="acceleration">Acceleration (m/s²):</label>
+                <input type="number" id="acceleration" step="0.1" required placeholder="Enter acceleration">
+                <button type="submit"><i class="fas fa-calculator"></i> Calculate Force</button>
+            </form>
+        </section>
+
+        <!-- Energy Calculation -->
+        <section class="form-section slide-in-right">
+            <form id="energyForm">
+                <h2>Energy Calculation</h2>
+                <label for="mass">Mass (kg):</label>
+                <input type="number" id="energyMass" step="0.1" required placeholder="Enter mass">
+                <label for="velocity">Velocity (m/s):</label>
+                <input type="number" id="velocity" step="0.1" placeholder="Enter velocity">
+                <label for="height">Height (m):</label>
+                <input type="number" id="height" step="0.1" placeholder="Enter height">
+                <button id="calculateEnergy"><i class="fas fa-lightbulb"></i> Calculate Energy</button>
+            </form>
+        </section>
+
+        <!-- History and Visualization -->
+        <section class="button-group fade-in">
+            <button id="viewHistory"><i class="fas fa-history"></i> View Calculation History</button>
+            <button id="viewOntology"><i class="fas fa-project-diagram"></i> View Ontology Structure</button>
+        </section>
+
+        <!-- Results -->
+        <div id="results" class="fade-in">
+            <h2>Results</h2>
+            <p id="resultOutput"></p>
+            <canvas id="chart" class="hidden"></canvas>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
+
